@@ -1,7 +1,5 @@
 import streamlit as st
 import ml_stock_predictor
-from dotenv import load_dotenv
-load_dotenv()
 
 from sklearn.metrics import accuracy_score, r2_score, mean_absolute_error, mean_squared_error
 import pandas as pd
