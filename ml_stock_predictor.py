@@ -20,15 +20,6 @@ from ta.momentum import RSIIndicator, StochasticOscillator, WilliamsRIndicator
 from ta.volume import OnBalanceVolumeIndicator, VolumeWeightedAveragePrice
 from ta.volatility import BollingerBands, AverageTrueRange
 
-from dotenv import load_dotenv
-
-try:
-    env_path = Path(__file__).parent / ".env"
-except NameError:
-    env_path = Path.cwd() / ".env"
-
-load_dotenv(dotenv_path=env_path)
-
 def get_data_from_tradier(symbol, api_key):
     import requests
     url = f"https://api.tradier.com/v1/markets/history"
