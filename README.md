@@ -24,7 +24,3 @@ train_and_predict(
     api_choice="Tradier",
     api_key="YOUR_API_KEY"
 )
-
-## Requirements
-
-pip install pandas numpy scikit-learn xgboost lightgbm ta requests
