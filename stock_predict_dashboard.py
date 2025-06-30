@@ -125,7 +125,8 @@ if st.sidebar.button("Run Prediction"):
             y_reg_pred_usd = expected_moves
             r2 = r2_score(y_reg_test_usd, y_reg_pred_usd)
             mae = mean_absolute_error(y_reg_test_usd, y_reg_pred_usd)
-            rmse = mean_squared_error(y_reg_test_usd, y_reg_pred_usd, squared=False)
+            mse = mean_squared_error(y_reg_test_usd, y_reg_pred_usd)
+            rmse = np.sqrt(mse)
             st.markdown(f"- **R² Score**: {r2:.3f} — Measures how well predictions explain actual returns. 1.0 = perfect fit, 0.0 = no better than average, negative = worse than guessing.")
             st.markdown(f"- **MAE**: {mae:.2f} USD — Typical dollar error between predicted and actual return values.")
             st.markdown(f"- **RMSE**: {rmse:.2f} USD — Like MAE but more sensitive to large errors. Useful for spotting big misses.")
